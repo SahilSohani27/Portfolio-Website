@@ -1,0 +1,105 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+@import 'shadcn/tailwind.css';
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --font-sans: var(--font-inter), 'Inter Fallback', sans-serif;
+  --font-mono: var(--font-jetbrains), 'JetBrains Mono Fallback', monospace;
+  --font-heading: var(--font-geist-pixel-square), 'Geist Pixel Square Fallback', sans-serif;
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-border: var(--border);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-teal: var(--teal);
+  --color-teal-dim: var(--teal-dim);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-destructive: var(--destructive);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+}
+
+:root {
+  color-scheme: dark;
+
+  /* Core */
+  --background: oklch(0.09 0 0);
+  --foreground: oklch(0.92 0 0);
+
+  /* Cards / surfaces */
+  --card: oklch(0.12 0 0);
+  --card-foreground: oklch(0.92 0 0);
+
+  /* Popover */
+  --popover: oklch(0.13 0 0);
+  --popover-foreground: oklch(0.92 0 0);
+
+  /* Teal accent */
+  --teal: oklch(0.72 0.13 183);
+  --teal-dim: oklch(0.72 0.13 183 / 15%);
+
+  /* Primary */
+  --primary: oklch(0.92 0 0);
+  --primary-foreground: oklch(0.09 0 0);
+
+  /* Secondary */
+  --secondary: oklch(0.16 0 0);
+  --secondary-foreground: oklch(0.85 0 0);
+
+  /* Muted */
+  --muted: oklch(0.15 0 0);
+  --muted-foreground: oklch(0.52 0 0);
+
+  /* Accent */
+  --accent: oklch(0.16 0 0);
+  --accent-foreground: oklch(0.92 0 0);
+
+  /* Destructive */
+  --destructive: oklch(0.65 0.20 27);
+
+  /* Borders & inputs */
+  --border: oklch(1 0 0 / 8%);
+  --input: oklch(1 0 0 / 10%);
+  --ring: oklch(0.72 0.13 183 / 40%);
+
+  --radius: 0.25rem;
+}
+
+@layer utilities {
+  .font-heading {
+    font-family: var(--font-heading);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+  html {
+    @apply scroll-smooth;
+  }
+  ::selection {
+    background: oklch(0.72 0.13 183 / 25%);
+    color: oklch(0.92 0 0);
+  }
+}
