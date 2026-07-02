@@ -62,7 +62,7 @@ export const projectDetails: Record<string, ProjectDetail> = {
     status: 'Personal Project',
     statusColor: 'teal',
     github: 'https://github.com/SahilSohani27/Invosure-Smart-GST-Invoice-verifier',
-    researchPaper: 'https://ieeexplore.ieee.org',
+    researchPaper: 'https://drive.google.com/file/d/1Q-z6Wz1XEkZsfQT6mxIc2uf60Udm0lij/view?usp=sharing',
     problem:
       'GST invoice verification is a manual, repetitive, and error-prone process. Businesses receive hundreds of invoices with varying vendor formats and must cross-check GST registrations against the government portal. Doing this by hand is slow and inconsistent. The goal: build a system that automatically extracts vendor and GST entities from invoices using an LLM, then verifies those entities against the GST portal without human intervention.',
     architecture: [
@@ -102,7 +102,7 @@ export const projectDetails: Record<string, ProjectDetail> = {
     status: 'Research',
     statusColor: 'teal',
     github: 'https://github.com/SahilSohani27/PI-EVA-MA-RAG',
-    researchPaper: 'https://ieeexplore.ieee.org',
+    researchPaper: 'https://drive.google.com/file/d/1aW3qRVE1Naz7InGCSXwV0IHbVYFyDLqi/view?usp=sharing',
     problem:
       'Standard RAG systems retrieve context and generate answers, but they provide no signal about how confident the system actually is. Hallucination is especially dangerous in multi-hop reasoning tasks where multiple evidence steps are chained together. The goal: build a Multi-Agent RAG pipeline that quantifies uncertainty through paraphrase variance (PI-EVA), so the system can distinguish reliable answers from speculative ones — and communicate that distinction explicitly.',
     architecture: [
